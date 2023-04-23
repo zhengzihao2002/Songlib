@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="songlib.view.EditController">
+   <children>
+      <VBox layoutY="40.0" prefHeight="469.0" prefWidth="458.0" AnchorPane.bottomAnchor="-40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <GridPane hgap="10.0" prefHeight="500.0" prefWidth="743.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" maxWidth="218.24401092529297" minWidth="105.0" prefWidth="207.82904815673828" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="253.17095184326172" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="86.11309051513672" minHeight="10.0" prefHeight="83.89625549316406" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="124.60374450683594" minHeight="10.0" prefHeight="124.60374450683594" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="150.4906463623047" minHeight="10.0" prefHeight="114.03828430175781" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="nameLabel" prefHeight="17.0" prefWidth="84.0" text="Song name:" />
+                  <Label fx:id="artistLabel" prefHeight="17.0" prefWidth="71.0" text="Artist:" GridPane.rowIndex="1" />
+                  <Label prefHeight="17.0" prefWidth="67.0" text="Year:" GridPane.rowIndex="2" />
+                  <Label prefHeight="17.0" prefWidth="67.0" text="Album:" GridPane.rowIndex="3" />
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField fx:id="nameText" layoutX="41.0" layoutY="20.0" prefHeight="52.0" prefWidth="238.0" promptText="Required" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TextField fx:id="artistText" layoutX="38.0" layoutY="34.0" prefHeight="52.0" prefWidth="238.0" promptText="Required" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <TextField fx:id="yearText" layoutX="38.0" layoutY="45.0" prefHeight="52.0" prefWidth="238.0" promptText="Optional" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <TextField fx:id="albumText" layoutX="39.0" layoutY="28.0" prefHeight="52.0" prefWidth="238.0" promptText="Optional" />
+                     </children>
+                  </Pane>
+               </children>
+            </GridPane>
+            <Pane prefHeight="112.0" prefWidth="458.0">
+               <children>
+                  <Button fx:id="submitButton" layoutX="219.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#submit" prefHeight="52.0" prefWidth="238.0" text="Submit" />
+                  <Label fx:id="warning" alignment="CENTER" layoutX="19.0" prefHeight="31.0" prefWidth="425.0" textAlignment="JUSTIFY" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="backBtn" layoutX="133.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#back" prefHeight="31.0" prefWidth="53.0" text="Back" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Text layoutX="219.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editing a Song" wrappingWidth="238.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
