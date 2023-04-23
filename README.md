@@ -13,4 +13,4 @@ A simple song library for CS-213 Software Methodology created usign JavaFX.
 
 ## Contributors of the project
 - [Zihao Zheng](https://github.com/zhengzihao2002) - Author
-- [Yiming Huang] - Part-time bug finder
+- [Yiming Huang] - BUG reporter
